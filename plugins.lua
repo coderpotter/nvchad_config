@@ -16,7 +16,6 @@ local plugins = {
         end,
       },
     },
-    opts = function(_, opts) opts.ensure_installed = {"beautysh", "bibtex-tidy", "black", "clang-format", "clangd", "codespell", "css-lsp", "debugpy", "deno", "fixjson", "grammarly-languageserver", "html-lsp", "latexindent", "ltex-ls", "lua-language-server", "luaformatter", "markdownlint", "mdformat", "prettier", "pydocstyle", "pyright", "python-lsp-server", "ruff", "ruff-lsp", "shellcheck", "sourcery", "stylua", "texlab", "textlint", "typescript-language-server", "write-good"} end,
     config = function()
 
       require "plugins.configs.lspconfig"
@@ -27,7 +26,7 @@ local plugins = {
   -- override plugin configs
   {
     "williamboman/mason.nvim",
-    opts = overrides.mason,
+     opts = function(_, opts) opts.ensure_installed = {"beautysh", "bibtex-tidy", "black", "clang-format", "clangd", "codespell", "css-lsp", "debugpy", "deno", "fixjson", "grammarly-languageserver", "html-lsp", "latexindent", "ltex-ls", "lua-language-server", "luaformatter", "markdownlint", "mdformat", "prettier", "pydocstyle", "pyright", "python-lsp-server", "ruff", "ruff-lsp", "shellcheck", "sourcery", "stylua", "texlab", "textlint", "typescript-language-server", "write-good"} end,
   },
 
   {
