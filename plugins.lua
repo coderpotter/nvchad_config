@@ -38,7 +38,8 @@ local plugins = {
     opts = overrides.nvimtree,
   },
 
-  -- Install a plugin
+  { "neoclide/coc.nvim", lazy = false },
+
   {
     "max397574/better-escape.nvim",
     event = "InsertEnter",
@@ -50,8 +51,17 @@ local plugins = {
   {
     "zbirenbaum/copilot.lua",
     cmd = "Copilot",
-    event = "User AstroFile",
+    event = "InsertEnter",
     opts = { suggestion = { auto_trigger = true, debounce = 150 } },
+    config = function()
+      require("copilot").setup {
+        filetypes = {
+          lua = true,
+          python = true,
+          markdown = true,
+        },
+      }
+    end,
   },
 
   {
@@ -64,7 +74,7 @@ local plugins = {
         return
       end
       local function has_words_before()
-        local line, col = table.unpack(vim.api.nvim_win_get_cursor(0))
+        local line, col = unpack(vim.api.nvim_win_get_cursor(0))
         return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match "%s" == nil
       end
       if not opts.mapping then
