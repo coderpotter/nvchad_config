@@ -6,8 +6,7 @@
 3. Install the following:
    - [ ] LazyGit `conda install -c conda-forge lazygit`
    - [ ] Install all Mason packages `:MasonInstallAll`
-   - [ ] 'pip install beautysh black clang-format codespell debugpy mdformat
-         pydocstyle pyright python-lsp-server ruff ruff-lsp sourcery'
+   - [ ] `pip install beautysh black clang-format codespell debugpy mdformat pydocstyle pyright python-lsp-server ruff ruff-lsp sourcery`
    - [ ] Install `coc.nvim` by `cd ~/.local/share/nvim/lazy/coc.nvim/` and
          running `npm install`.
    - [ ] Check `:CocInfo` to ensure everything is working as expected.
