@@ -17,7 +17,6 @@ local plugins = {
       },
     },
     config = function()
-
       require "plugins.configs.lspconfig"
       require "custom.configs.lspconfig"
     end, -- Override to setup mason-lspconfig
@@ -26,7 +25,7 @@ local plugins = {
   -- override plugin configs
   {
     "williamboman/mason.nvim",
-     opts = function(_, opts) opts.ensure_installed = {"beautysh", "bibtex-tidy", "black", "clang-format", "clangd", "codespell", "css-lsp", "debugpy", "deno", "fixjson", "grammarly-languageserver", "html-lsp", "latexindent", "ltex-ls", "lua-language-server", "luaformatter", "markdownlint", "mdformat", "prettier", "pydocstyle", "pyright", "python-lsp-server", "ruff", "ruff-lsp", "shellcheck", "sourcery", "stylua", "texlab", "textlint", "typescript-language-server", "write-good"} end,
+    opts = overrides.mason,
   },
 
   {

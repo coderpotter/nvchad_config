@@ -37,6 +37,32 @@ M.mason = {
     -- c/cpp stuff
     "clangd",
     "clang-format",
+
+    -- custom stuff
+    "beautysh",
+    "bibtex-tidy",
+    "black",
+    "clang-format",
+    "clangd",
+    "codespell",
+    "debugpy",
+    "fixjson",
+    "grammarly-languageserver",
+    "latexindent",
+    "ltex-ls",
+    "luaformatter",
+    "markdownlint",
+    "mdformat",
+    "pydocstyle",
+    "pyright",
+    "python-lsp-server",
+    "ruff",
+    "ruff-lsp",
+    "shellcheck",
+    "sourcery",
+    "texlab",
+    "textlint",
+    "write-good",
   },
 }
 
