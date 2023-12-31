@@ -290,6 +290,7 @@ local plugins = {
   { import = "nvcommunity.editor.symbols-outline" },
   { import = "nvcommunity.editor.telescope-undo" },
   { import = "nvcommunity.git.diffview" },
+  { import = "nvcommunity.git.neogit"},
   { import = "nvcommunity.git.lazygit" },
   { import = "nvcommunity.lsp.dim" },
   { import = "nvcommunity.lsp.prettyhover" },
