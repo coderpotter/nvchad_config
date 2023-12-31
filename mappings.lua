@@ -7,7 +7,7 @@ M.general = {
     ["<leader>gg"] = { ":LazyGit<CR>", "lazygit" },
     ["Q"] = { ":q<CR>", "Quit" },
     ["<leader>fs"] = { ":call CocActionAsync('codeAction', 'cursor')<CR>", "Sourcery Suggestion" },
-    ["<leader>fS"] = { ":CocDiagnostics", "All Sourcery Suggestions" },
+    ["<leader>fS"] = { ":CocDiagnostics<CR>", "All Sourcery Suggestions" },
   },
   v = {
     [">"] = { ">gv", "indent" },
