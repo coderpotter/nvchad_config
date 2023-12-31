@@ -17,6 +17,7 @@ local sources = {
   -- python
   b.formatting.black,
   b.formatting.isort,
+  b.formatting.ruff,
 }
 
 null_ls.setup {

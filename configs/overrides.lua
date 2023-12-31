@@ -48,6 +48,7 @@ M.mason = {
     "debugpy",
     "fixjson",
     "grammarly-languageserver",
+    "isort",
     "latexindent",
     "ltex-ls",
     "luaformatter",
