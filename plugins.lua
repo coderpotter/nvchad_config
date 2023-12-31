@@ -16,7 +16,9 @@ local plugins = {
         end,
       },
     },
+    opts = function(_, opts) opts.ensure_installed = {"beautysh", "bibtex-tidy", "black", "clang-format", "clangd", "codespell", "css-lsp", "debugpy", "deno", "fixjson", "grammarly-languageserver", "html-lsp", "latexindent", "ltex-ls", "lua-language-server", "luaformatter", "markdownlint", "mdformat", "prettier", "pydocstyle", "pyright", "python-lsp-server", "ruff", "ruff-lsp", "shellcheck", "sourcery", "stylua", "texlab", "textlint", "typescript-language-server", "write-good"} end,
     config = function()
+
       require "plugins.configs.lspconfig"
       require "custom.configs.lspconfig"
     end, -- Override to setup mason-lspconfig
@@ -64,7 +66,7 @@ local plugins = {
         return
       end
       local function has_words_before()
-        local line, col = unpack(vim.api.nvim_win_get_cursor(0))
+        local line, col = table.unpack(vim.api.nvim_win_get_cursor(0))
         return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match "%s" == nil
       end
       if not opts.mapping then
